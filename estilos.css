@@ -9,10 +9,11 @@ html {
     }
 
 
-    /* background-color: F9F3DF; */
+    /* background-color: F9F3DF; + Gradiente*/
 
 body{
     background-color: #F9F3DF;
+    background: linear-gradient(90deg, rgba(255,221,237,1) 0%, rgba(250,235,223,1) 20%, rgba(250,235,223,1) 80%, rgba(255,221,237,1) 100%);
     font-family: 'Playfair Display', serif;
     color: #CF2F87;
 }
@@ -72,7 +73,14 @@ body{
 .headerMenu ul li a{ 
     text-decoration: none ;
     color: #CF2F87;
+    transition: all 1s;
 }
+
+.headerMenu ul li a:hover{ 
+    
+    color: #ff00d4;
+}
+
 
 /* CARROUSEL */
 
@@ -89,10 +97,36 @@ body{
 /* PRODUCTOS DESTACADOS */
 
 .productosDestacados{
-
+   
+    width:100%;
     margin:20px 0px;
     height: 1050px;
 
+}
+
+@keyframes destacar{
+
+    0%{color: rgb(247, 159, 203); }
+    50%{transform: scale(1.5);
+        color:#CF2F87}
+    100%{transform: scale(1);;
+        color: rgb(247, 159, 203) }    
+}
+
+/*Hago flex el contenedor del título para que con la animación no se exceda el ancho total de la pantalla*/
+.productosDestacadosTitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.productosDestacadosTitle h2{
+    animation-name: destacar;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    animation-delay: 1s;
 }
 
 .productosDestacadosCards{
@@ -120,6 +154,7 @@ body{
     margin: 20px 50px;
     padding: 20px 20px;
     background-color: #FDE2E2;
+    background: radial-gradient(circle, rgba(246,222,244,1) 21%, rgba(251,195,195,0.7530199579831933) 50%, rgba(246,222,244,1) 81%);
     width: 300px;
     height: 400px;
     text-align: center;
@@ -127,8 +162,12 @@ body{
     font-weight: bold;
     border: 3px solid #a0966e;
     border-radius: 3%;
-    
+    transition: all 1s;
 
+}
+
+.productosDestacados__card:hover{
+    transform: scale(1.1);
 }
 
 .productosDestacados__card__foto{
@@ -269,6 +308,10 @@ body{
     align-items: center;
     width:40%;
     overflow: hidden;
+}
+
+.footer img{
+    transform: scale(0.8);
 }
 
 
