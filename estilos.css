@@ -28,7 +28,7 @@ body{
     width:100%
 }
 
-.headerTitle{
+.headerTitulo{
     display: flex;
     justify-content: space-around;
     font-size: 3rem; 
@@ -42,7 +42,7 @@ body{
     width:40%;
 }
 
-.headerTitleText{
+.headerTituloTexto{
     width:60%;
     display:flex;
     padding-right: 20%;
@@ -50,49 +50,46 @@ body{
     justify-content: space-around;
 }
 
-.headerMenu{
-    top: 5px;
+
+
+.navbar{
     margin: 50px 20px;
     padding:20px 20px;
     border: #a0966e solid 3px;
+
 }
 
-.headerMenu ul{
-    display:flex;
-    justify-content: space-evenly;
-    list-style: none;
-    width: 100%;
-} 
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-right: 5%;
+}
 
-.headerMenu ul li{ 
+
+.navbar-nav a{
     font-size: 2rem;
     font-weight: bold;
-    margin-right: 120px;
-
-}
-.headerMenu ul li a{ 
-    text-decoration: none ;
-    color: #CF2F87;
-    transition: all 1s;
-}
-
-.headerMenu ul li a:hover{ 
     
-    color: #ff00d4;
+    
 }
 
+#colorTexto{
+    color: #CF2F87;
+    
+}
+
+.nav-link{
+    margin-right: 100px;
+}
 
 /* CARROUSEL */
 
-.carrousel{
-    width: 100%;
-    height: 200px;
-    margin:20px 0px;
-    background-image: url(./images/galletaBicicleta.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+#carouselProductos{
+    width:40%;
+    margin: 0 auto;
 }
+
+
 
 /* PRODUCTOS DESTACADOS */
 
